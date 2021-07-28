@@ -16,13 +16,13 @@
 // Version 1.0.0
 //   - The initial version:
 //   - Features:
-//    - whitelist/blacklist
-//    - Settings dialog
-//    - hide thread based on whether you've clicked since most recent.
-//    - works on latest posts, forum pages, userhistory.
+//    - Whitelist/blacklist/Mark Read
+//    - Works on Latest Forum Threads and Forum pages.
+//    - Hide thread based on whether you've clicked since most recent.
+//    - Hotkeys: blacklist (b), whitelist (w), mark read (r)
+//    - Settings dialog to set/clear above.
 // Todo:
-//    - Display status of hidden threads?
-//    - Popup in UI hide a selected thread
+//    - Status area (how many threads currently hidden, etc.)
 
 const initialOptions = {
   options: {
