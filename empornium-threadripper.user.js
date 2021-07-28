@@ -410,9 +410,7 @@ const hotkeyHandler = (thread, e) => {
   }
 
   if (e.keyCode === 82) { // r read
-    console.log('here1')
     if (thread.classList.contains('threadman-thread-target')) {
-      console.log('here2')
       addClickToOptions(threadMetaData);
       markThread('read', thread);
     }
