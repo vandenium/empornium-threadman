@@ -2,7 +2,7 @@
 // @name        Empornium ThreadMan
 // @description Thread visibility management
 // @namespace   Empornium Scripts
-// @version     1.0.0
+// @version     1.0.1
 // @author      vandenium
 // @grant       GM_setValue
 // @grant       GM_getValue
@@ -13,9 +13,11 @@
 // @include /^https://www\.empornium\.(me|sx|is)\/userhistory*/
 // ==/UserScript==
 // Changelog:
+// Version 1.0.1
+//  - Update hotkey thread highlighting
 // Version 1.0.0
-//   - The initial version:
-//   - Features:
+//  - The initial version:
+//    - Features:
 //    - Whitelist/blacklist/Mark Read
 //    - Works on Latest Forum Threads and Forum pages.
 //    - Hide thread based on whether you've clicked since most recent.
@@ -354,33 +356,34 @@ const markThread = (type, thread) => {
     bgColor = '#333';
     thread.classList.remove('rowa');
     thread.classList.remove('rowb');
-    thread.style.transition = 'opacity 1.2s';
+    thread.style.transition = 'opacity 0.75s';
     thread.style.opacity = 0;
+    thread.style.border = 'solid gainsboro 1px';
   }
   if (type === 'whitelist') {
     bgColor = 'whitesmoke';
     thread.classList.remove('rowa');
     thread.classList.remove('rowb');
-    thread.style.transition = 'opacity 1.2s';
-    thread.style.opacity = 0;
+    thread.style.border = 'solid gainsboro 1px';
+    thread.style.transition = 'opacity 0.75s';
   }
 
   if (type === 'read') {
-    bgColor = '#8FBC8B';
+    bgColor = '#ACE1AF' //'celadon'// '#8FBC8B';
     thread.classList.remove('rowa');
     thread.classList.remove('rowb');
     thread.style.transition = 'opacity 1.2s';
     thread.style.opacity = 0;
+    thread.style.border = 'solid gainsboro 1px';
   }
-
-  thread.setAttribute('style', `background-color: ${bgColor} !important`);
+  
   thread.style.backgroundColor = bgColor;
   thread.style.borderRadius = '2px';
 
   if (type === 'blacklist' || type === 'read') {
     setTimeout(() => {
       thread.remove();
-    }, 900);
+    }, 700);
   }
 };
 
