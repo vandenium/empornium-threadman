@@ -2,7 +2,7 @@
 // @name        Empornium ThreadMan
 // @description Thread visibility management
 // @namespace   Empornium Scripts
-// @version     1.0.1
+// @version     1.0.2
 // @author      vandenium
 // @grant       GM_setValue
 // @grant       GM_getValue
@@ -13,6 +13,8 @@
 // @include /^https://www\.empornium\.(me|sx|is)\/userhistory*/
 // ==/UserScript==
 // Changelog:
+// Version 1.0.2
+//  - Move settings link to the furthest left of user dropdown area.
 // Version 1.0.1
 //  - Update hotkey thread highlighting
 // Version 1.0.0
@@ -313,16 +315,20 @@ const addClickHandlerToThreads = (threads, selectorToThread) => {
 
 // Add settings link to page.
 const addSettingsLink = () => {
-  const el = document.createElement('li');
+  const ul = document.createElement('ul');
+  const li = document.createElement('li');
+  ul.append(li);
+  ul.style.display = 'inline-block';
+  
   const a = document.createElement('a');
   a.href = '#';
   a.textContent = 'ThreadMan🦸‍♂️Settings';
   a.addEventListener('click', (e) => {
     showSettings();
   });
-  el.appendChild(a);
-  const container = document.querySelector('#userinfo_username');
-  container.appendChild(el);
+  li.appendChild(a);
+  const container = document.querySelector('#major_stats');
+  container.prepend(ul);
 }
 
 /**
