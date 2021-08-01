@@ -2,7 +2,7 @@
 // @name        Empornium ThreadMan
 // @description Thread visibility management
 // @namespace   Empornium Scripts
-// @version     1.0.2
+// @version     1.0.3
 // @author      vandenium
 // @grant       GM_setValue
 // @grant       GM_getValue
@@ -11,8 +11,11 @@
 // @include /^https://www\.empornium\.(me|sx|is)\/forum\/*/
 // @include /^https://www\.empornium\.(me|sx|is)\/article*/
 // @include /^https://www\.empornium\.(me|sx|is)\/userhistory*/
+// @include /^https://www\.empornium\.(me|sx|is)\/index.php/
 // ==/UserScript==
 // Changelog:
+// Version 1.0.3
+//  - Adding index to includes.
 // Version 1.0.2
 //  - Move settings link to the furthest left of user dropdown area.
 // Version 1.0.1
