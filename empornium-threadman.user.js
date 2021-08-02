@@ -2,18 +2,16 @@
 // @name        Empornium ThreadMan
 // @description Thread visibility management
 // @namespace   Empornium Scripts
-// @version     1.0.3
+// @version     1.0.4
 // @author      vandenium
 // @grant       GM_setValue
 // @grant       GM_getValue
 // ---
-// @include /^https://www\.empornium\.(me|sx|is)\/torrents.php/
-// @include /^https://www\.empornium\.(me|sx|is)\/forum\/*/
-// @include /^https://www\.empornium\.(me|sx|is)\/article*/
-// @include /^https://www\.empornium\.(me|sx|is)\/userhistory*/
-// @include /^https://www\.empornium\.(me|sx|is)\/index.php/
+// @include /^https://www\.empornium\.(me|sx|is)\/(torrents.php|forum/|article|userhistory|index.php)*/
 // ==/UserScript==
 // Changelog:
+// Version 1.0.4
+//  - Update @include to one-liner.
 // Version 1.0.3
 //  - Adding index to includes.
 // Version 1.0.2
